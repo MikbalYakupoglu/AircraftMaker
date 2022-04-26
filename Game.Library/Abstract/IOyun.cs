@@ -5,8 +5,9 @@ namespace Game.Library.Abstract
 {
     internal interface IOyun
     {
+        event EventHandler KalanSureDegisti;
         bool DevamEdiyorMu { get;}
-        TimeSpan KalanSure { get; }
+        int KalanSure { get; }
 
         void Basla();
         void Topla();
