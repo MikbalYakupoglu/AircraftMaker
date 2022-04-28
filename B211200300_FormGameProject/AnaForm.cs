@@ -15,11 +15,13 @@ namespace B211200300_FormGameProject
 {
     public partial class AnaForm : Form
     {
-        private readonly Oyun _oyun = new Oyun();
+        private readonly Oyun _oyun;
 
         public AnaForm()
         {
             InitializeComponent();
+
+            _oyun = new Oyun(oyunPanel,bilgiPanel);
 
             _oyun.KalanSure = 120;
             _oyun.KalanSureDegisti += Oyun_KalanSureDegisti;
