@@ -11,7 +11,7 @@ namespace Game.Library.Concrete
     {
         public Seker(int panelUzunlugu, int panelGenisligi) : base(panelUzunlugu, panelGenisligi)
         {
-
+            hareketMesafesi = (int)(Height * 0.1);
         }
     }
 }

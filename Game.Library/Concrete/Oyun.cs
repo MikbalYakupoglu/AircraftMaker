@@ -13,6 +13,7 @@ namespace Game.Library.Concrete
     {
         #region Alanlar
         private readonly Timer _kalanSureTimer = new Timer() { Interval = 1000 };
+        private readonly Timer _hareketTimer = new Timer() { Interval = 100 };
         private readonly Timer _toplananCisimTimer = new Timer() { Interval = 500 };
         private int _kalanSure;
 
@@ -56,6 +57,7 @@ namespace Game.Library.Concrete
         {
             _kalanSureTimer.Tick += KalanSureTimer_Tick;
             _toplananCisimTimer.Tick += ToplananCisimTimer_Tick;
+            _hareketTimer.Tick += HareketTimer_Tick;
             _oyunPanel = oyunPanel;
             _bilgiPanel = bilgiPanel;
 
@@ -70,6 +72,30 @@ namespace Game.Library.Concrete
             ToplananCisimOlustur();
         }
 
+        private void HareketTimer_Tick(object sender, EventArgs e)
+        {
+            ToplananCisimleriHareketEttir();
+        }
+
+        private void ToplananCisimleriHareketEttir()
+        {
+            for (int i = _toplananCisimler.Count-1; i >= 0 ; i--)
+            {
+                var toplananCisim = _toplananCisimler[i];
+                toplananCisim.HareketEttir(Yon.Asagi);
+
+                var yereDustuMu = toplananCisim.YereDustuMu(_sepet);
+
+                if (yereDustuMu)
+                {
+                    _toplananCisimler.Remove(toplananCisim);
+                    _oyunPanel.Controls.Remove(toplananCisim);
+                }
+
+            }
+        }
+
+
         public void Basla()
         {
             if (DevamEdiyorMu) return;
@@ -82,7 +108,6 @@ namespace Game.Library.Concrete
             ZamanlayicilariBaslat();
 
             SepetOlustur();
-            ToplananCisimOlustur(); 
         }
 
 
@@ -112,12 +137,14 @@ namespace Game.Library.Concrete
         {
             _kalanSureTimer.Start();
             _toplananCisimTimer.Start();
+            _hareketTimer.Start();
         }
 
         private void ZamanlayicilariDurdur()
         {
             _kalanSureTimer.Stop();
             _toplananCisimTimer.Stop();
+            _hareketTimer.Stop();
         }
 
         private void SepetOlustur()

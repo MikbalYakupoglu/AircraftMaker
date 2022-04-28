@@ -16,7 +16,11 @@ namespace Game.Library.Abstract
             get => base.Right;
             set => Left = value - Width;
         }
-
+        public new int Bottom
+        {
+            get => base.Bottom;
+            set => Top = value - Height;
+        }
         public int Center
         {
             get => Left + Width / 2;
@@ -29,11 +33,7 @@ namespace Game.Library.Abstract
             set => Top = value - Height / 2;
         }
 
-        public new int Bottom
-        {
-            get => base.Bottom;
-            set => Top = value - Height;
-        }
+
         
         public Cisim(int panelUzunlugu, int panelGenisligi)
         {
@@ -52,6 +52,9 @@ namespace Game.Library.Abstract
                     break;
                 case Yon.Sol:
                     SolaHareketEttir();
+                    break;
+                case Yon.Asagi:
+                    AsagiHareketEttir();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(yon), yon, null);
