@@ -43,7 +43,7 @@
             this.bilgiPanel.Controls.Add(this.kalansure);
             this.bilgiPanel.Controls.Add(this.kalansureLabel);
             this.bilgiPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bilgiPanel.Location = new System.Drawing.Point(857, 0);
+            this.bilgiPanel.Location = new System.Drawing.Point(981, 0);
             this.bilgiPanel.Name = "bilgiPanel";
             this.bilgiPanel.Size = new System.Drawing.Size(205, 712);
             this.bilgiPanel.TabIndex = 0;
@@ -77,7 +77,7 @@
             this.oyunPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.oyunPanel.Location = new System.Drawing.Point(0, 0);
             this.oyunPanel.Name = "oyunPanel";
-            this.oyunPanel.Size = new System.Drawing.Size(857, 712);
+            this.oyunPanel.Size = new System.Drawing.Size(981, 712);
             this.oyunPanel.TabIndex = 1;
             // 
             // anaMenuPanel
@@ -86,14 +86,14 @@
             this.anaMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.anaMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.anaMenuPanel.Name = "anaMenuPanel";
-            this.anaMenuPanel.Size = new System.Drawing.Size(857, 712);
+            this.anaMenuPanel.Size = new System.Drawing.Size(981, 712);
             this.anaMenuPanel.TabIndex = 0;
             // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 712);
+            this.ClientSize = new System.Drawing.Size(1186, 712);
             this.Controls.Add(this.oyunPanel);
             this.Controls.Add(this.bilgiPanel);
             this.Name = "AnaForm";

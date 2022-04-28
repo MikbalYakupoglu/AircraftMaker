@@ -11,11 +11,11 @@ namespace Game.Library.Concrete
 {
     internal class Sepet : Cisim
     {
-        public Sepet(Size panelBoyutu, int oyunAlani) : base(oyunAlani)
+        public Sepet(int panelUzunlugu, int panelGenisligi) : base(panelUzunlugu, panelGenisligi)
         {
-            var sepetLocation = panelBoyutu.Height - Height;
+            var sepetLocation = panelUzunlugu - Height;
 
-            Center = oyunAlani / 2;
+            Center = panelGenisligi / 2;
             Top = sepetLocation;
 
             hareketMesafesi = Width;

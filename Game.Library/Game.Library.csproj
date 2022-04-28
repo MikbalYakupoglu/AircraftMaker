@@ -48,7 +48,19 @@
     </Compile>
     <Compile Include="Abstract\IHareketEden.cs" />
     <Compile Include="Abstract\IOyun.cs" />
+    <Compile Include="Abstract\ToplananCisim.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Concrete\Bardak.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Concrete\Cay.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Concrete\Oyun.cs" />
+    <Compile Include="Concrete\Seker.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Concrete\Sepet.cs">
       <SubType>Component</SubType>
     </Compile>

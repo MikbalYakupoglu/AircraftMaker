@@ -5,7 +5,8 @@ namespace Game.Library.Abstract
 {
     internal interface IHareketEden
     {
-        int OyunAlani { get; }
+        int PanelUzunlugu { get; }
+        int PanelGenisligi { get; }
         int hareketMesafesi { get; }
 
         /// <summary>

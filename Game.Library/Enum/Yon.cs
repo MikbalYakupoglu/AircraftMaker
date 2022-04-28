@@ -3,6 +3,7 @@
     public enum Yon
     {
         Sag,
-        Sol
+        Sol,
+        Asagi
     }
 }

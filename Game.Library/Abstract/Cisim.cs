@@ -7,7 +7,8 @@ namespace Game.Library.Abstract
 {
     internal abstract class Cisim : PictureBox, IHareketEden
     {
-        public int OyunAlani { get; }
+        public int PanelUzunlugu { get; }
+        public int PanelGenisligi { get; }
         public int hareketMesafesi { get; protected set; }
 
         public new int Right
@@ -27,11 +28,18 @@ namespace Game.Library.Abstract
             get => Top + Height / 2;
             set => Top = value - Height / 2;
         }
+
+        public new int Bottom
+        {
+            get => base.Bottom;
+            set => Top = value - Height;
+        }
         
-        public Cisim(int oyunAlani)
+        public Cisim(int panelUzunlugu, int panelGenisligi)
         {
             Image = Image = Image.FromFile($@"Images\{GetType().Name}.png");
-            this.OyunAlani = oyunAlani;
+            PanelUzunlugu = panelUzunlugu;
+            PanelGenisligi = panelGenisligi;
             SizeMode = PictureBoxSizeMode.AutoSize;
         }
 
@@ -67,14 +75,26 @@ namespace Game.Library.Abstract
 
         private bool SagaHareketEttir()
         {
-            if (Right == OyunAlani) return true;
+            if (Right == PanelGenisligi) return true;
 
             var yeniRight = Right + hareketMesafesi;
-            var tasacakMi = yeniRight >  OyunAlani;
+            var tasacakMi = yeniRight >  PanelGenisligi;
 
-            Right = tasacakMi ? OyunAlani : yeniRight;
+            Right = tasacakMi ? PanelGenisligi : yeniRight;
 
-            return Right == OyunAlani;
+            return Right == PanelGenisligi;
+        }
+
+        private bool AsagiHareketEttir()
+        {
+            if (Bottom == PanelUzunlugu) return true;
+                
+            var yeniBottom = Bottom + hareketMesafesi;
+            var tasacakMi = yeniBottom > PanelUzunlugu;
+
+            Bottom = tasacakMi ? PanelUzunlugu : yeniBottom;
+
+            return Bottom == PanelUzunlugu;
         }
     }
 }
