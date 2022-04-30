@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace B211200300_FormGameProject.Properties {
+namespace Top5Form.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace B211200300_FormGameProject.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("B211200300_FormGameProject.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Top5Form.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,57 +57,6 @@ namespace B211200300_FormGameProject.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_sugar_cube_50_2 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-sugar-cube-50-2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_tea_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-tea-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_tea_tin_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-tea-tin-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_teapot_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-teapot-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap kisspng_computer_icons_basket_shopping_cart_supermarket_vector_5adcd9b6f04358_2723558915244230949841 {
-            get {
-                object obj = ResourceManager.GetObject("kisspng-computer-icons-basket-shopping-cart-supermarket-vector-5adcd9b6f04358.272" +
-                        "3558915244230949841", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

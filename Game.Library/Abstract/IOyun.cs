@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * B211200300
+ * Muhammet İkbal Yakupoğlu
+ * Bilişim Sistemleri Mühendisliği
+ */
+
+using System;
 using Game.Library.Enum;
 
 namespace Game.Library.Abstract
@@ -10,7 +16,8 @@ namespace Game.Library.Abstract
         int KalanSure { get; }
 
         void Basla();
-        void Topla();
+        void Bitir();
+        void DurdurveBaslat();
         void HareketEt(Yon yon);
 
 

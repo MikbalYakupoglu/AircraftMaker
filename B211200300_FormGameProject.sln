@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B211200300_FormGameProject"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Library", "Game.Library\Game.Library.csproj", "{AA95139B-118D-4F50-A35C-DBBBB176D480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Top5Form", "Top5Form\Top5Form.csproj", "{5CB145F5-7F09-4D9F-A70B-AC93FA606B28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AA95139B-118D-4F50-A35C-DBBBB176D480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA95139B-118D-4F50-A35C-DBBBB176D480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA95139B-118D-4F50-A35C-DBBBB176D480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB145F5-7F09-4D9F-A70B-AC93FA606B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB145F5-7F09-4D9F-A70B-AC93FA606B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB145F5-7F09-4D9F-A70B-AC93FA606B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB145F5-7F09-4D9F-A70B-AC93FA606B28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

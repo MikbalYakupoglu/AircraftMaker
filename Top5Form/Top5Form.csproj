@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{09B5F70B-05D2-4186-9D46-A83445F08A36}</ProjectGuid>
+    <ProjectGuid>{5CB145F5-7F09-4D9F-A70B-AC93FA606B28}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>B211200300_FormGameProject</RootNamespace>
-    <AssemblyName>B211200300_FormGameProject</AssemblyName>
+    <RootNamespace>Top5Form</RootNamespace>
+    <AssemblyName>Top5Form</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnaForm.cs">
+    <Compile Include="TopFiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnaForm.Designer.cs">
-      <DependentUpon>AnaForm.cs</DependentUpon>
+    <Compile Include="TopFiveForm.Designer.cs">
+      <DependentUpon>TopFiveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AnaForm.resx">
-      <DependentUpon>AnaForm.cs</DependentUpon>
+    <EmbeddedResource Include="TopFiveForm.resx">
+      <DependentUpon>TopFiveForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,35 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\kisspng-computer-icons-basket-shopping-cart-supermarket-vector-5adcd9b6f04358.2723558915244230949841.jpg" />
+    <None Include="bin\Debug\Images\medal.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Game.Library\Game.Library.csproj">
-      <Project>{AA95139B-118D-4F50-A35C-DBBBB176D480}</Project>
-      <Name>Game.Library</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Top5Form\Top5Form.csproj">
-      <Project>{5cb145f5-7f09-4d9f-a70b-ac93fa606b28}</Project>
-      <Name>Top5Form</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Images\icons8-tea-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Images\icons8-tea-tin-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Images\icons8-sugar-cube-50-2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\medal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\trophy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\Images\icons8-teapot-100.png" />
+    <None Include="bin\Debug\Images\trophy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

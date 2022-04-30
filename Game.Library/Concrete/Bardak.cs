@@ -12,7 +12,6 @@ namespace Game.Library.Concrete
     {
         public Bardak(int panelUzunlugu, int panelGenisligi) : base( panelUzunlugu, panelGenisligi)
         {
-            hareketMesafesi = (int)(Height * 0.1);
         }
     }
 }
