@@ -6,6 +6,7 @@
 
 
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using Game.Library.Concrete;
@@ -27,13 +28,13 @@ namespace B211200300_FormGameProject
             FormBorderStyle = FormBorderStyle.None;
             oyunBaslatPictureBox.Location = new Point(this.Width - 70, this.Height - 100);
 
-            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuAdiTextBox, oyunSuresiTextBox);
+            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuBilgiPanel, oyuncuAdiTextBox,
+                oyunSuresiTextBox, uretilecekMiktarTextBox);
             _oyun.KalanSureDegisti += Oyun_KalanSureDegisti;
             _oyun.CisimToplandi += Oyun_CisimToplandi;
             _oyun.SkorDegisti += Oyun_SkorDegisti;
 
-            oyunSuresiTextBox.Text = 6.ToString();
-
+            textBox4.ReadOnly = true;
         }
 
 
@@ -45,10 +46,10 @@ namespace B211200300_FormGameProject
                 bilgiPanel.Visible = false;
             }
 
-            oyuncuAdiTextBox.Visible = false;
-            oyunSuresiTextBox.Visible = false;
-            textBox3.Visible = false;
-            textBox4.Visible = false;
+            //oyuncuAdiTextBox.Visible = false;
+            //oyunSuresiTextBox.Visible = false;
+            //textBox3.Visible = false;
+            //textBox4.Visible = false;
 
         }
 
@@ -68,6 +69,7 @@ namespace B211200300_FormGameProject
                     {
                         _oyun.Bitir();
                     }
+
                     break;
 
                 case Keys.P:
@@ -91,12 +93,12 @@ namespace B211200300_FormGameProject
             }
         }
 
-
         private void Oyun_KalanSureDegisti(object sender, EventArgs e)
         {
             if (_oyun.KalanSure >= 0) kalansure.Text = _oyun.KalanSure.ToString();
             else _oyun.Bitir();
         }
+
         private void Oyun_CisimToplandi(object sender, EventArgs e)
         {
             tamamlananihaLabel.Text = _oyun.OyunSkoru.ToString();
@@ -109,6 +111,7 @@ namespace B211200300_FormGameProject
         private void Oyun_SkorDegisti(object sender, EventArgs e)
         {
             tamamlananihaLabel.Text = _oyun.OyunSkoru.ToString();
+            kalanihaLabel.Text = _oyun.KalanSkor.ToString();
         }
 
         private void SkorPictureBox_Click(object sender, EventArgs e)
@@ -120,6 +123,60 @@ namespace B211200300_FormGameProject
         private void OyunBaslatPictureBox_Click(object sender, EventArgs e)
         {
             _oyun.Basla();
+            Focus();
+        }
+
+        private void oyuncuAdiTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+            else if (e.KeyChar == (char)Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void oyunSuresiTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+            else if (e.KeyChar == (char)Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
+            {
+                e.Handled = true;
+                _oyun.Basla();
+                Focus();
+            }
+            else if (e.KeyChar == (char)Keys.Escape)
+            {
+                Close();
+            }
+        }
+
+        private void textBox4_Enter(object sender, EventArgs e)
+        {
+            ActiveControl = oyuncuAdiTextBox;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Oyunu Başlatmak İçin -Enter- Tuşuna Basınız.\n" +
+                            "Oyundan Çıkmak İçin -ESC- Tuşuna Basınız.\n" +
+                            "Hareket Etmek İçin -A , D- veya -Sol Ok , Sağ Ok- Tuşlarını Kullanınız.\n" +
+                            "Oyunu Durdurmak İçin -P- Tuşuna Basınız.\n");
         }
     }
 }

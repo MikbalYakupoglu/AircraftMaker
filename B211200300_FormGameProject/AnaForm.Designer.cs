@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaForm));
             this.bilgiPanel = new System.Windows.Forms.Panel();
             this.kodLabel = new System.Windows.Forms.Label();
             this.kanatLabel = new System.Windows.Forms.Label();
@@ -43,20 +44,32 @@
             this.kalansureLabel = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
             this.anaMenuPanel = new System.Windows.Forms.Panel();
+            this.oyuncuBilgiPanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.oyuncuAdiTextBox = new System.Windows.Forms.TextBox();
+            this.oyunSuresiTextBox = new System.Windows.Forms.TextBox();
+            this.uretilecekMiktarTextBox = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.oyunBaslatPictureBox = new System.Windows.Forms.PictureBox();
             this.skorPictureBox = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.oyunSuresiTextBox = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.oyuncuAdiTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.bilgiPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kodPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kanatPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorPictureBox)).BeginInit();
             this.oyunPanel.SuspendLayout();
             this.anaMenuPanel.SuspendLayout();
+            this.oyuncuBilgiPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oyunBaslatPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skorPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bilgiPanel
@@ -112,7 +125,7 @@
             // 
             // kodPictureBox
             // 
-            this.kodPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_code_50;
+            this.kodPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("kodPictureBox.Image")));
             this.kodPictureBox.Location = new System.Drawing.Point(53, 577);
             this.kodPictureBox.Name = "kodPictureBox";
             this.kodPictureBox.Size = new System.Drawing.Size(50, 50);
@@ -122,7 +135,7 @@
             // 
             // kanatPictureBox
             // 
-            this.kanatPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.indir;
+            this.kanatPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("kanatPictureBox.Image")));
             this.kanatPictureBox.Location = new System.Drawing.Point(53, 499);
             this.kanatPictureBox.Name = "kanatPictureBox";
             this.kanatPictureBox.Size = new System.Drawing.Size(50, 50);
@@ -132,7 +145,7 @@
             // 
             // motorPictureBox
             // 
-            this.motorPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_engine_50_2;
+            this.motorPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("motorPictureBox.Image")));
             this.motorPictureBox.Location = new System.Drawing.Point(53, 411);
             this.motorPictureBox.Name = "motorPictureBox";
             this.motorPictureBox.Size = new System.Drawing.Size(50, 50);
@@ -215,23 +228,136 @@
             // anaMenuPanel
             // 
             this.anaMenuPanel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.anaMenuPanel.Controls.Add(this.label8);
+            this.anaMenuPanel.Controls.Add(this.label7);
+            this.anaMenuPanel.Controls.Add(this.pictureBox2);
+            this.anaMenuPanel.Controls.Add(this.oyuncuBilgiPanel);
+            this.anaMenuPanel.Controls.Add(this.pictureBox1);
             this.anaMenuPanel.Controls.Add(this.oyunBaslatPictureBox);
             this.anaMenuPanel.Controls.Add(this.skorPictureBox);
-            this.anaMenuPanel.Controls.Add(this.textBox4);
-            this.anaMenuPanel.Controls.Add(this.oyunSuresiTextBox);
-            this.anaMenuPanel.Controls.Add(this.textBox3);
-            this.anaMenuPanel.Controls.Add(this.oyuncuAdiTextBox);
             this.anaMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.anaMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.anaMenuPanel.Name = "anaMenuPanel";
             this.anaMenuPanel.Size = new System.Drawing.Size(1599, 881);
             this.anaMenuPanel.TabIndex = 0;
             // 
+            // oyuncuBilgiPanel
+            // 
+            this.oyuncuBilgiPanel.BackColor = System.Drawing.Color.RosyBrown;
+            this.oyuncuBilgiPanel.Controls.Add(this.label6);
+            this.oyuncuBilgiPanel.Controls.Add(this.label5);
+            this.oyuncuBilgiPanel.Controls.Add(this.label4);
+            this.oyuncuBilgiPanel.Controls.Add(this.label3);
+            this.oyuncuBilgiPanel.Controls.Add(this.oyuncuAdiTextBox);
+            this.oyuncuBilgiPanel.Controls.Add(this.oyunSuresiTextBox);
+            this.oyuncuBilgiPanel.Controls.Add(this.uretilecekMiktarTextBox);
+            this.oyuncuBilgiPanel.Controls.Add(this.textBox4);
+            this.oyuncuBilgiPanel.Location = new System.Drawing.Point(1016, 474);
+            this.oyuncuBilgiPanel.Name = "oyuncuBilgiPanel";
+            this.oyuncuBilgiPanel.Size = new System.Drawing.Size(440, 231);
+            this.oyuncuBilgiPanel.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(20, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(201, 29);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Üretilecek Ürün :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(20, 121);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(216, 29);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Üretilecek Miktar :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(20, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(181, 29);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Süre : (Saniye)";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(20, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 29);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Mühendis Adı :";
+            // 
+            // oyuncuAdiTextBox
+            // 
+            this.oyuncuAdiTextBox.BackColor = System.Drawing.SystemColors.Info;
+            this.oyuncuAdiTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.oyuncuAdiTextBox.Location = new System.Drawing.Point(242, 13);
+            this.oyuncuAdiTextBox.Name = "oyuncuAdiTextBox";
+            this.oyuncuAdiTextBox.Size = new System.Drawing.Size(167, 36);
+            this.oyuncuAdiTextBox.TabIndex = 0;
+            this.oyuncuAdiTextBox.Text = "Mühendis1";
+            this.oyuncuAdiTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.oyuncuAdiTextBox_KeyPress);
+            // 
+            // oyunSuresiTextBox
+            // 
+            this.oyunSuresiTextBox.BackColor = System.Drawing.SystemColors.Info;
+            this.oyunSuresiTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.oyunSuresiTextBox.Location = new System.Drawing.Point(242, 64);
+            this.oyunSuresiTextBox.Name = "oyunSuresiTextBox";
+            this.oyunSuresiTextBox.Size = new System.Drawing.Size(167, 36);
+            this.oyunSuresiTextBox.TabIndex = 0;
+            this.oyunSuresiTextBox.Text = "120";
+            this.oyunSuresiTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.oyunSuresiTextBox_KeyPress);
+            // 
+            // uretilecekMiktarTextBox
+            // 
+            this.uretilecekMiktarTextBox.BackColor = System.Drawing.SystemColors.Info;
+            this.uretilecekMiktarTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.uretilecekMiktarTextBox.Location = new System.Drawing.Point(242, 118);
+            this.uretilecekMiktarTextBox.Name = "uretilecekMiktarTextBox";
+            this.uretilecekMiktarTextBox.Size = new System.Drawing.Size(167, 36);
+            this.uretilecekMiktarTextBox.TabIndex = 0;
+            this.uretilecekMiktarTextBox.Text = "5";
+            this.uretilecekMiktarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox4.Location = new System.Drawing.Point(242, 173);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(167, 36);
+            this.textBox4.TabIndex = 0;
+            this.textBox4.Text = "Bayraktar İHA";
+            this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(385, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1000, 197);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // oyunBaslatPictureBox
             // 
-            this.oyunBaslatPictureBox.Location = new System.Drawing.Point(1369, 657);
+            this.oyunBaslatPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("oyunBaslatPictureBox.Image")));
+            this.oyunBaslatPictureBox.Location = new System.Drawing.Point(1472, 678);
             this.oyunBaslatPictureBox.Name = "oyunBaslatPictureBox";
-            this.oyunBaslatPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.oyunBaslatPictureBox.Size = new System.Drawing.Size(200, 160);
             this.oyunBaslatPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.oyunBaslatPictureBox.TabIndex = 2;
             this.oyunBaslatPictureBox.TabStop = false;
@@ -239,8 +365,8 @@
             // 
             // skorPictureBox
             // 
-            this.skorPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.trophy;
-            this.skorPictureBox.Location = new System.Drawing.Point(108, 510);
+            this.skorPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("skorPictureBox.Image")));
+            this.skorPictureBox.Location = new System.Drawing.Point(108, 628);
             this.skorPictureBox.Name = "skorPictureBox";
             this.skorPictureBox.Size = new System.Drawing.Size(100, 100);
             this.skorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -248,42 +374,36 @@
             this.skorPictureBox.TabStop = false;
             this.skorPictureBox.Click += new System.EventHandler(this.SkorPictureBox_Click);
             // 
-            // textBox4
+            // pictureBox2
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(1043, 600);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(167, 36);
-            this.textBox4.TabIndex = 0;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(108, 361);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // oyunSuresiTextBox
+            // label7
             // 
-            this.oyunSuresiTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.oyunSuresiTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.oyunSuresiTextBox.Location = new System.Drawing.Point(1043, 478);
-            this.oyunSuresiTextBox.Name = "oyunSuresiTextBox";
-            this.oyunSuresiTextBox.Size = new System.Drawing.Size(167, 36);
-            this.oyunSuresiTextBox.TabIndex = 0;
-            this.oyunSuresiTextBox.Text = "10";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(243, 666);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(510, 39);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "En Yüksek Skorlar İçin Tıklayınız\r\n";
             // 
-            // textBox3
+            // label8
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(1043, 537);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(167, 36);
-            this.textBox3.TabIndex = 0;
-            // 
-            // oyuncuAdiTextBox
-            // 
-            this.oyuncuAdiTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.oyuncuAdiTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.oyuncuAdiTextBox.Location = new System.Drawing.Point(1043, 419);
-            this.oyuncuAdiTextBox.Name = "oyuncuAdiTextBox";
-            this.oyuncuAdiTextBox.Size = new System.Drawing.Size(167, 36);
-            this.oyuncuAdiTextBox.TabIndex = 0;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(253, 387);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(401, 117);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Oyun Tuşları Hakkında \r\nBilgi Almak İçin Tıklayınız\r\n\r\n";
             // 
             // AnaForm
             // 
@@ -293,7 +413,7 @@
             this.Controls.Add(this.oyunPanel);
             this.Controls.Add(this.bilgiPanel);
             this.Name = "AnaForm";
-            this.Text = "Form1";
+            this.Text = "Aircraft Maker";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AnaForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnaForm_KeyDown);
@@ -305,8 +425,12 @@
             this.oyunPanel.ResumeLayout(false);
             this.anaMenuPanel.ResumeLayout(false);
             this.anaMenuPanel.PerformLayout();
+            this.oyuncuBilgiPanel.ResumeLayout(false);
+            this.oyuncuBilgiPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oyunBaslatPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skorPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,11 +453,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox uretilecekMiktarTextBox;
         private System.Windows.Forms.TextBox oyuncuAdiTextBox;
         private System.Windows.Forms.PictureBox skorPictureBox;
         private System.Windows.Forms.PictureBox oyunBaslatPictureBox;
         private System.Windows.Forms.TextBox oyunSuresiTextBox;
+        private System.Windows.Forms.Panel oyuncuBilgiPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }
 

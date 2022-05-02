@@ -64,7 +64,7 @@
     <Compile Include="Concrete\Kod.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Concrete\Sepet.cs">
+    <Compile Include="Concrete\Muhendis.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Enum\Yon.cs" />

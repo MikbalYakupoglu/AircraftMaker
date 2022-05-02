@@ -13,10 +13,10 @@ namespace Game.Library.Concrete
     {
         public Muhendis(int panelUzunlugu, int panelGenisligi) : base(panelUzunlugu, panelGenisligi)
         {
-            var sepetLocation = panelUzunlugu - Height;
+            var muhendisLocation = panelUzunlugu - Height;
 
             Center = panelGenisligi / 2;
-            Top = sepetLocation;
+            Top = muhendisLocation;
 
             hareketMesafesi = Width;
         }

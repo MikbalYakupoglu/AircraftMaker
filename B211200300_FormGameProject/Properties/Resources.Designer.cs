@@ -93,6 +93,16 @@ namespace B211200300_FormGameProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Katman_1 {
+            get {
+                object obj = ResourceManager.GetObject("Katman 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_computer_icons_basket_shopping_cart_supermarket_vector_5adcd9b6f04358_2723558915244230949841 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-computer-icons-basket-shopping-cart-supermarket-vector-5adcd9b6f04358.272" +
@@ -117,6 +127,16 @@ namespace B211200300_FormGameProject.Properties {
         internal static System.Drawing.Bitmap trophy {
             get {
                 object obj = ResourceManager.GetObject("trophy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trophy1 {
+            get {
+                object obj = ResourceManager.GetObject("trophy1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
