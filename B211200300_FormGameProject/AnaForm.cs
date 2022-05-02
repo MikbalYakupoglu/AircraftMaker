@@ -21,13 +21,19 @@ namespace B211200300_FormGameProject
         {
             InitializeComponent();
 
-            this.MinimumSize = this.Size;
-            this.FormBorderStyle = FormBorderStyle.None;
+            Focus();
+
+            MinimumSize = Size;
+            FormBorderStyle = FormBorderStyle.None;
             oyunBaslatPictureBox.Location = new Point(this.Width - 70, this.Height - 100);
 
-            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuAdiTextBox, oyunSuresiTextBox);
+            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuAdiTextBox, oyunSuresiTextBox,gizliKutuLabel);
             _oyun.KalanSureDegisti += Oyun_KalanSureDegisti;
+            _oyun.CisimToplandi += Oyun_CisimToplandi;
             _oyun.SkorDegisti += Oyun_SkorDegisti;
+
+            oyunSuresiTextBox.Text = 5.ToString();
+
         }
 
 
@@ -37,6 +43,7 @@ namespace B211200300_FormGameProject
             if (!_oyun.DevamEdiyorMu)
             {
                 bilgiPanel.Visible = false;
+                gizliKutuLabel.Visible = false;
             }
 
             oyuncuAdiTextBox.Visible = false;
@@ -54,7 +61,14 @@ namespace B211200300_FormGameProject
                     _oyun.Basla();
                     break;
                 case Keys.Escape:
-                    this.Close();
+                    if (!_oyun.DevamEdiyorMu)
+                    {
+                        Close();
+                    }
+                    else
+                    {
+                        _oyun.Bitir();
+                    }
                     break;
 
                 case Keys.P:
@@ -75,46 +89,36 @@ namespace B211200300_FormGameProject
                 case Keys.A:
                     _oyun.HareketEt(Yon.Sol);
                     break;
-
-                case Keys.B:
-                    anaMenuPanel.Visible = false;
-                    break;
-                case Keys.N:
-                    anaMenuPanel.Visible = true;
-                    break;
             }
         }
 
 
         private void Oyun_KalanSureDegisti(object sender, EventArgs e)
         {
-            if (_oyun.KalanSure > 0)
-            {
-                kalansure.Text = _oyun.KalanSure.ToString();
-                return;
-            }
+            if (_oyun.KalanSure >= 0) kalansure.Text = _oyun.KalanSure.ToString();
+            else _oyun.Bitir();
+        }
+        private void Oyun_CisimToplandi(object sender, EventArgs e)
+        {
+            tamamlananihaLabel.Text = _oyun.OyunSkoru.ToString();
 
-
-            _oyun.Bitir();
+            motorLabel.Text = _oyun.MotorSayisi.ToString();
+            kanatLabel.Text = _oyun.KanatSayisi.ToString();
+            kodLabel.Text = _oyun.KodSayisi.ToString();
         }
 
         private void Oyun_SkorDegisti(object sender, EventArgs e)
         {
-            demlenenCayLabel.Text = _oyun.OyunSkoru.ToString();
-
-            bardakLabel.Text = _oyun.BardakSayisi.ToString();
-            cayLabel.Text = _oyun.CaySayisi.ToString();
-            sekerLabel.Text = _oyun.SekerSayisi.ToString();
-
+            tamamlananihaLabel.Text = _oyun.OyunSkoru.ToString();
         }
 
-        private void skorPictureBox_Click(object sender, EventArgs e)
+        private void SkorPictureBox_Click(object sender, EventArgs e)
         {
             Top5Form.Top5Form topFiveForm = new Top5Form.Top5Form();
             topFiveForm.Show();
         }
 
-        private void oyunBaslatPictureBox_Click(object sender, EventArgs e)
+        private void OyunBaslatPictureBox_Click(object sender, EventArgs e)
         {
             _oyun.Basla();
         }

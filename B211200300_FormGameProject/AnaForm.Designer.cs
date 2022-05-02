@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             this.bilgiPanel = new System.Windows.Forms.Panel();
-            this.sekerLabel = new System.Windows.Forms.Label();
-            this.cayLabel = new System.Windows.Forms.Label();
-            this.bardakLabel = new System.Windows.Forms.Label();
-            this.sekerPictureBox = new System.Windows.Forms.PictureBox();
-            this.cayPictureBox = new System.Windows.Forms.PictureBox();
-            this.bardakPictureBox = new System.Windows.Forms.PictureBox();
-            this.kalanCayLabel = new System.Windows.Forms.Label();
-            this.demlenenCayLabel = new System.Windows.Forms.Label();
+            this.kodLabel = new System.Windows.Forms.Label();
+            this.kanatLabel = new System.Windows.Forms.Label();
+            this.motorLabel = new System.Windows.Forms.Label();
+            this.kodPictureBox = new System.Windows.Forms.PictureBox();
+            this.kanatPictureBox = new System.Windows.Forms.PictureBox();
+            this.motorPictureBox = new System.Windows.Forms.PictureBox();
+            this.kalanihaLabel = new System.Windows.Forms.Label();
+            this.tamamlananihaLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.kalansure = new System.Windows.Forms.Label();
             this.kalansureLabel = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
             this.anaMenuPanel = new System.Windows.Forms.Panel();
+            this.gizliKutuLabel = new System.Windows.Forms.Label();
             this.oyunBaslatPictureBox = new System.Windows.Forms.PictureBox();
             this.skorPictureBox = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.oyunSuresiTextBox = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.oyuncuAdiTextBox = new System.Windows.Forms.TextBox();
             this.bilgiPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sekerPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cayPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bardakPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kodPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kanatPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motorPictureBox)).BeginInit();
             this.oyunPanel.SuspendLayout();
             this.anaMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.oyunBaslatPictureBox)).BeginInit();
@@ -62,14 +63,14 @@
             // bilgiPanel
             // 
             this.bilgiPanel.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.bilgiPanel.Controls.Add(this.sekerLabel);
-            this.bilgiPanel.Controls.Add(this.cayLabel);
-            this.bilgiPanel.Controls.Add(this.bardakLabel);
-            this.bilgiPanel.Controls.Add(this.sekerPictureBox);
-            this.bilgiPanel.Controls.Add(this.cayPictureBox);
-            this.bilgiPanel.Controls.Add(this.bardakPictureBox);
-            this.bilgiPanel.Controls.Add(this.kalanCayLabel);
-            this.bilgiPanel.Controls.Add(this.demlenenCayLabel);
+            this.bilgiPanel.Controls.Add(this.kodLabel);
+            this.bilgiPanel.Controls.Add(this.kanatLabel);
+            this.bilgiPanel.Controls.Add(this.motorLabel);
+            this.bilgiPanel.Controls.Add(this.kodPictureBox);
+            this.bilgiPanel.Controls.Add(this.kanatPictureBox);
+            this.bilgiPanel.Controls.Add(this.motorPictureBox);
+            this.bilgiPanel.Controls.Add(this.kalanihaLabel);
+            this.bilgiPanel.Controls.Add(this.tamamlananihaLabel);
             this.bilgiPanel.Controls.Add(this.label2);
             this.bilgiPanel.Controls.Add(this.label1);
             this.bilgiPanel.Controls.Add(this.kalansure);
@@ -80,85 +81,85 @@
             this.bilgiPanel.Size = new System.Drawing.Size(205, 881);
             this.bilgiPanel.TabIndex = 0;
             // 
-            // sekerLabel
+            // kodLabel
             // 
-            this.sekerLabel.AutoSize = true;
-            this.sekerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sekerLabel.Location = new System.Drawing.Point(135, 587);
-            this.sekerLabel.Name = "sekerLabel";
-            this.sekerLabel.Size = new System.Drawing.Size(27, 29);
-            this.sekerLabel.TabIndex = 6;
-            this.sekerLabel.Text = "0";
+            this.kodLabel.AutoSize = true;
+            this.kodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kodLabel.Location = new System.Drawing.Point(135, 587);
+            this.kodLabel.Name = "kodLabel";
+            this.kodLabel.Size = new System.Drawing.Size(27, 29);
+            this.kodLabel.TabIndex = 6;
+            this.kodLabel.Text = "0";
             // 
-            // cayLabel
+            // kanatLabel
             // 
-            this.cayLabel.AutoSize = true;
-            this.cayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cayLabel.Location = new System.Drawing.Point(135, 509);
-            this.cayLabel.Name = "cayLabel";
-            this.cayLabel.Size = new System.Drawing.Size(27, 29);
-            this.cayLabel.TabIndex = 6;
-            this.cayLabel.Text = "0";
+            this.kanatLabel.AutoSize = true;
+            this.kanatLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kanatLabel.Location = new System.Drawing.Point(135, 509);
+            this.kanatLabel.Name = "kanatLabel";
+            this.kanatLabel.Size = new System.Drawing.Size(27, 29);
+            this.kanatLabel.TabIndex = 6;
+            this.kanatLabel.Text = "0";
             // 
-            // bardakLabel
+            // motorLabel
             // 
-            this.bardakLabel.AutoSize = true;
-            this.bardakLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.bardakLabel.Location = new System.Drawing.Point(135, 422);
-            this.bardakLabel.Name = "bardakLabel";
-            this.bardakLabel.Size = new System.Drawing.Size(27, 29);
-            this.bardakLabel.TabIndex = 6;
-            this.bardakLabel.Text = "0";
+            this.motorLabel.AutoSize = true;
+            this.motorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.motorLabel.Location = new System.Drawing.Point(135, 422);
+            this.motorLabel.Name = "motorLabel";
+            this.motorLabel.Size = new System.Drawing.Size(27, 29);
+            this.motorLabel.TabIndex = 6;
+            this.motorLabel.Text = "0";
             // 
-            // sekerPictureBox
+            // kodPictureBox
             // 
-            this.sekerPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_sugar_cube_50_2;
-            this.sekerPictureBox.Location = new System.Drawing.Point(53, 577);
-            this.sekerPictureBox.Name = "sekerPictureBox";
-            this.sekerPictureBox.Size = new System.Drawing.Size(50, 50);
-            this.sekerPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.sekerPictureBox.TabIndex = 5;
-            this.sekerPictureBox.TabStop = false;
+            this.kodPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_code_50;
+            this.kodPictureBox.Location = new System.Drawing.Point(53, 577);
+            this.kodPictureBox.Name = "kodPictureBox";
+            this.kodPictureBox.Size = new System.Drawing.Size(50, 50);
+            this.kodPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.kodPictureBox.TabIndex = 5;
+            this.kodPictureBox.TabStop = false;
             // 
-            // cayPictureBox
+            // kanatPictureBox
             // 
-            this.cayPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_tea_tin_50;
-            this.cayPictureBox.Location = new System.Drawing.Point(53, 499);
-            this.cayPictureBox.Name = "cayPictureBox";
-            this.cayPictureBox.Size = new System.Drawing.Size(50, 50);
-            this.cayPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.cayPictureBox.TabIndex = 5;
-            this.cayPictureBox.TabStop = false;
+            this.kanatPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.indir;
+            this.kanatPictureBox.Location = new System.Drawing.Point(53, 499);
+            this.kanatPictureBox.Name = "kanatPictureBox";
+            this.kanatPictureBox.Size = new System.Drawing.Size(50, 50);
+            this.kanatPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.kanatPictureBox.TabIndex = 5;
+            this.kanatPictureBox.TabStop = false;
             // 
-            // bardakPictureBox
+            // motorPictureBox
             // 
-            this.bardakPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_tea_50;
-            this.bardakPictureBox.Location = new System.Drawing.Point(53, 411);
-            this.bardakPictureBox.Name = "bardakPictureBox";
-            this.bardakPictureBox.Size = new System.Drawing.Size(50, 50);
-            this.bardakPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.bardakPictureBox.TabIndex = 5;
-            this.bardakPictureBox.TabStop = false;
+            this.motorPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_engine_50_2;
+            this.motorPictureBox.Location = new System.Drawing.Point(53, 411);
+            this.motorPictureBox.Name = "motorPictureBox";
+            this.motorPictureBox.Size = new System.Drawing.Size(50, 50);
+            this.motorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.motorPictureBox.TabIndex = 5;
+            this.motorPictureBox.TabStop = false;
             // 
-            // kalanCayLabel
+            // kalanihaLabel
             // 
-            this.kalanCayLabel.AutoSize = true;
-            this.kalanCayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kalanCayLabel.Location = new System.Drawing.Point(142, 223);
-            this.kalanCayLabel.Name = "kalanCayLabel";
-            this.kalanCayLabel.Size = new System.Drawing.Size(23, 25);
-            this.kalanCayLabel.TabIndex = 4;
-            this.kalanCayLabel.Text = "0";
+            this.kalanihaLabel.AutoSize = true;
+            this.kalanihaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kalanihaLabel.Location = new System.Drawing.Point(142, 223);
+            this.kalanihaLabel.Name = "kalanihaLabel";
+            this.kalanihaLabel.Size = new System.Drawing.Size(23, 25);
+            this.kalanihaLabel.TabIndex = 4;
+            this.kalanihaLabel.Text = "0";
             // 
-            // demlenenCayLabel
+            // tamamlananihaLabel
             // 
-            this.demlenenCayLabel.AutoSize = true;
-            this.demlenenCayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.demlenenCayLabel.Location = new System.Drawing.Point(170, 173);
-            this.demlenenCayLabel.Name = "demlenenCayLabel";
-            this.demlenenCayLabel.Size = new System.Drawing.Size(23, 25);
-            this.demlenenCayLabel.TabIndex = 4;
-            this.demlenenCayLabel.Text = "0";
+            this.tamamlananihaLabel.AutoSize = true;
+            this.tamamlananihaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tamamlananihaLabel.Location = new System.Drawing.Point(182, 173);
+            this.tamamlananihaLabel.Name = "tamamlananihaLabel";
+            this.tamamlananihaLabel.Size = new System.Drawing.Size(23, 25);
+            this.tamamlananihaLabel.TabIndex = 4;
+            this.tamamlananihaLabel.Text = "0";
             // 
             // label2
             // 
@@ -166,19 +167,19 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(22, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 25);
+            this.label2.Size = new System.Drawing.Size(112, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Kalan Çay :";
+            this.label2.Text = "Kalan İHA :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 173);
+            this.label1.Location = new System.Drawing.Point(3, 173);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 25);
+            this.label1.Size = new System.Drawing.Size(176, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Demlenen Çay :";
+            this.label1.Text = "Tamamlanan İHA :";
             // 
             // kalansure
             // 
@@ -215,11 +216,12 @@
             // anaMenuPanel
             // 
             this.anaMenuPanel.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.anaMenuPanel.Controls.Add(this.gizliKutuLabel);
             this.anaMenuPanel.Controls.Add(this.oyunBaslatPictureBox);
             this.anaMenuPanel.Controls.Add(this.skorPictureBox);
             this.anaMenuPanel.Controls.Add(this.textBox4);
-            this.anaMenuPanel.Controls.Add(this.textBox3);
             this.anaMenuPanel.Controls.Add(this.oyunSuresiTextBox);
+            this.anaMenuPanel.Controls.Add(this.textBox3);
             this.anaMenuPanel.Controls.Add(this.oyuncuAdiTextBox);
             this.anaMenuPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.anaMenuPanel.Location = new System.Drawing.Point(0, 0);
@@ -227,16 +229,27 @@
             this.anaMenuPanel.Size = new System.Drawing.Size(1599, 881);
             this.anaMenuPanel.TabIndex = 0;
             // 
+            // gizliKutuLabel
+            // 
+            this.gizliKutuLabel.AutoSize = true;
+            this.gizliKutuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gizliKutuLabel.ForeColor = System.Drawing.Color.Red;
+            this.gizliKutuLabel.Location = new System.Drawing.Point(728, 49);
+            this.gizliKutuLabel.Name = "gizliKutuLabel";
+            this.gizliKutuLabel.Size = new System.Drawing.Size(72, 39);
+            this.gizliKutuLabel.TabIndex = 3;
+            this.gizliKutuLabel.Text = "info";
+            this.gizliKutuLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // oyunBaslatPictureBox
             // 
-            this.oyunBaslatPictureBox.Image = global::B211200300_FormGameProject.Properties.Resources.icons8_teapot_100;
-            this.oyunBaslatPictureBox.Location = new System.Drawing.Point(1452, 717);
+            this.oyunBaslatPictureBox.Location = new System.Drawing.Point(1369, 657);
             this.oyunBaslatPictureBox.Name = "oyunBaslatPictureBox";
             this.oyunBaslatPictureBox.Size = new System.Drawing.Size(100, 100);
             this.oyunBaslatPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.oyunBaslatPictureBox.TabIndex = 2;
             this.oyunBaslatPictureBox.TabStop = false;
-            this.oyunBaslatPictureBox.Click += new System.EventHandler(this.oyunBaslatPictureBox_Click);
+            this.oyunBaslatPictureBox.Click += new System.EventHandler(this.OyunBaslatPictureBox_Click);
             // 
             // skorPictureBox
             // 
@@ -247,7 +260,7 @@
             this.skorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.skorPictureBox.TabIndex = 1;
             this.skorPictureBox.TabStop = false;
-            this.skorPictureBox.Click += new System.EventHandler(this.skorPictureBox_Click);
+            this.skorPictureBox.Click += new System.EventHandler(this.SkorPictureBox_Click);
             // 
             // textBox4
             // 
@@ -258,6 +271,16 @@
             this.textBox4.Size = new System.Drawing.Size(167, 36);
             this.textBox4.TabIndex = 0;
             // 
+            // oyunSuresiTextBox
+            // 
+            this.oyunSuresiTextBox.BackColor = System.Drawing.SystemColors.Info;
+            this.oyunSuresiTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.oyunSuresiTextBox.Location = new System.Drawing.Point(1043, 478);
+            this.oyunSuresiTextBox.Name = "oyunSuresiTextBox";
+            this.oyunSuresiTextBox.Size = new System.Drawing.Size(167, 36);
+            this.oyunSuresiTextBox.TabIndex = 0;
+            this.oyunSuresiTextBox.Text = "10";
+            // 
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.Info;
@@ -266,16 +289,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(167, 36);
             this.textBox3.TabIndex = 0;
-            // 
-            // oyunSuresiTextBox
-            // 
-            this.oyunSuresiTextBox.BackColor = System.Drawing.SystemColors.Info;
-            this.oyunSuresiTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.oyunSuresiTextBox.Location = new System.Drawing.Point(1043, 480);
-            this.oyunSuresiTextBox.Name = "oyunSuresiTextBox";
-            this.oyunSuresiTextBox.Size = new System.Drawing.Size(167, 36);
-            this.oyunSuresiTextBox.TabIndex = 0;
-            this.oyunSuresiTextBox.Text = "10";
             // 
             // oyuncuAdiTextBox
             // 
@@ -300,9 +313,9 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnaForm_KeyDown);
             this.bilgiPanel.ResumeLayout(false);
             this.bilgiPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sekerPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cayPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bardakPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kodPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kanatPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motorPictureBox)).EndInit();
             this.oyunPanel.ResumeLayout(false);
             this.anaMenuPanel.ResumeLayout(false);
             this.anaMenuPanel.PerformLayout();
@@ -319,22 +332,23 @@
         private System.Windows.Forms.Label kalansureLabel;
         private System.Windows.Forms.Panel oyunPanel;
         private System.Windows.Forms.Panel anaMenuPanel;
-        private System.Windows.Forms.Label sekerLabel;
-        private System.Windows.Forms.Label cayLabel;
-        private System.Windows.Forms.Label bardakLabel;
-        private System.Windows.Forms.PictureBox sekerPictureBox;
-        private System.Windows.Forms.PictureBox cayPictureBox;
-        private System.Windows.Forms.PictureBox bardakPictureBox;
-        private System.Windows.Forms.Label kalanCayLabel;
-        private System.Windows.Forms.Label demlenenCayLabel;
+        private System.Windows.Forms.Label kodLabel;
+        private System.Windows.Forms.Label kanatLabel;
+        private System.Windows.Forms.Label motorLabel;
+        private System.Windows.Forms.PictureBox kodPictureBox;
+        private System.Windows.Forms.PictureBox kanatPictureBox;
+        private System.Windows.Forms.PictureBox motorPictureBox;
+        private System.Windows.Forms.Label kalanihaLabel;
+        private System.Windows.Forms.Label tamamlananihaLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox oyunSuresiTextBox;
         private System.Windows.Forms.TextBox oyuncuAdiTextBox;
         private System.Windows.Forms.PictureBox skorPictureBox;
         private System.Windows.Forms.PictureBox oyunBaslatPictureBox;
+        private System.Windows.Forms.TextBox oyunSuresiTextBox;
+        private System.Windows.Forms.Label gizliKutuLabel;
     }
 }
 

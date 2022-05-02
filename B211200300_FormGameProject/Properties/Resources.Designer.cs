@@ -63,9 +63,9 @@ namespace B211200300_FormGameProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_sugar_cube_50_2 {
+        internal static System.Drawing.Bitmap icons8_code_50 {
             get {
-                object obj = ResourceManager.GetObject("icons8-sugar-cube-50-2", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-code-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace B211200300_FormGameProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_tea_50 {
+        internal static System.Drawing.Bitmap icons8_engine_50_2 {
             get {
-                object obj = ResourceManager.GetObject("icons8-tea-50", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-engine-50-2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,19 +83,9 @@ namespace B211200300_FormGameProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_tea_tin_50 {
+        internal static System.Drawing.Bitmap indir {
             get {
-                object obj = ResourceManager.GetObject("icons8-tea-tin-50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_teapot_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-teapot-100", resourceCulture);
+                object obj = ResourceManager.GetObject("indir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

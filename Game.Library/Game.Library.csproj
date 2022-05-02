@@ -51,14 +51,17 @@
     <Compile Include="Abstract\ToplananCisim.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Concrete\Bardak.cs">
+    <Compile Include="Concrete\GizliKutu.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Concrete\Cay.cs">
+    <Compile Include="Concrete\Motor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Concrete\Kanat.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Concrete\Oyun.cs" />
-    <Compile Include="Concrete\Seker.cs">
+    <Compile Include="Concrete\Kod.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Concrete\Sepet.cs">

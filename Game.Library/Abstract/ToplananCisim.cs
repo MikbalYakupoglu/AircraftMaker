@@ -19,7 +19,7 @@ namespace Game.Library.Abstract
             Left = Random.Next(panelGenisligi + 1 - Width);
         }
 
-        public bool YereDustuMu(Sepet sepet)
+        public bool YereDustuMu()
         {
             if (Bottom >= (PanelUzunlugu))
             {
