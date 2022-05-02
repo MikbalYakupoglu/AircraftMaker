@@ -155,28 +155,12 @@ namespace AircraftMaker
 
         private void oyuncuAdiTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
-            {
-                e.Handled = true;
-                SelectNextControl(ActiveControl, true, true, true, true);
-            }
-            else if (e.KeyChar == (char)Keys.Escape)
-            {
-                Close();
-            }
+            SiradakiTexteGec(sender, e);
         }
 
         private void oyunSuresiTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
-            {
-                e.Handled = true;
-                SelectNextControl(ActiveControl, true, true, true, true);
-            }
-            else if (e.KeyChar == (char)Keys.Escape)
-            {
-                Close();
-            }
+            SiradakiTexteGec(sender, e);
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
@@ -200,7 +184,18 @@ namespace AircraftMaker
 
         #endregion
 
-
+        private void SiradakiTexteGec(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
+            {
+                e.Handled = true;
+                SelectNextControl(ActiveControl, true, true, true, true);
+            }
+            else if (e.KeyChar == (char)Keys.Escape)
+            {
+                Close();
+            }
+        }
 
 
 
