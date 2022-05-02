@@ -88,7 +88,10 @@ namespace Top5Form
                     }
                     else
                     {
-                        topFive[i, j] = siralanmisValues[sayac];
+                        if (siralanmisValues.Length >= sayac)
+                        {
+                            topFive[i, j] = siralanmisValues[sayac];
+                        }
                     }
 
                     sayac++;

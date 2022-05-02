@@ -28,11 +28,12 @@ namespace B211200300_FormGameProject
             FormBorderStyle = FormBorderStyle.None;
             oyunBaslatPictureBox.Location = new Point(this.Width - 70, this.Height - 100);
 
-            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuBilgiPanel, oyuncuAdiTextBox,
+            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuAdiTextBox,
                 oyunSuresiTextBox, uretilecekMiktarTextBox);
+
             _oyun.KalanSureDegisti += Oyun_KalanSureDegisti;
             _oyun.CisimToplandi += Oyun_CisimToplandi;
-            _oyun.SkorDegisti += Oyun_SkorDegisti;
+            _oyun.UrunTamamlandi += Oyun_UrunTamamlandi;
 
             textBox4.ReadOnly = true;
         }
@@ -45,12 +46,6 @@ namespace B211200300_FormGameProject
             {
                 bilgiPanel.Visible = false;
             }
-
-            //oyuncuAdiTextBox.Visible = false;
-            //oyunSuresiTextBox.Visible = false;
-            //textBox3.Visible = false;
-            //textBox4.Visible = false;
-
         }
 
         private void AnaForm_KeyDown(object sender, KeyEventArgs e)
@@ -77,18 +72,31 @@ namespace B211200300_FormGameProject
                     kalansure.Text = _oyun.KalanSure.ToString();
                     break;
 
+
                 case Keys.Right:
-                    _oyun.HareketEt(Yon.Sag);
+                    if (!_oyun.OyunDuraklatildiMi)
+                    {
+                        _oyun.HareketEt(Yon.Sag);
+                    }
                     break;
                 case Keys.D:
-                    _oyun.HareketEt(Yon.Sag);
+                    if (!_oyun.OyunDuraklatildiMi)
+                    {
+                        _oyun.HareketEt(Yon.Sag);
+                    }
                     break;
 
                 case Keys.Left:
-                    _oyun.HareketEt(Yon.Sol);
+                    if (!_oyun.OyunDuraklatildiMi)
+                    {
+                        _oyun.HareketEt(Yon.Sol);
+                    }
                     break;
                 case Keys.A:
-                    _oyun.HareketEt(Yon.Sol);
+                    if (!_oyun.OyunDuraklatildiMi)
+                    {
+                        _oyun.HareketEt(Yon.Sol);
+                    }
                     break;
             }
         }
@@ -101,18 +109,20 @@ namespace B211200300_FormGameProject
 
         private void Oyun_CisimToplandi(object sender, EventArgs e)
         {
-            tamamlananihaLabel.Text = _oyun.OyunSkoru.ToString();
+            tamamlananihaLabel.Text = _oyun.TamamlananUrun.ToString();
 
             motorLabel.Text = _oyun.MotorSayisi.ToString();
             kanatLabel.Text = _oyun.KanatSayisi.ToString();
             kodLabel.Text = _oyun.KodSayisi.ToString();
         }
 
-        private void Oyun_SkorDegisti(object sender, EventArgs e)
+        private void Oyun_UrunTamamlandi(object sender, EventArgs e)
         {
-            tamamlananihaLabel.Text = _oyun.OyunSkoru.ToString();
-            kalanihaLabel.Text = _oyun.KalanSkor.ToString();
+            tamamlananihaLabel.Text = _oyun.TamamlananUrun.ToString();
+            kalanihaLabel.Text = _oyun.KalanUrun.ToString();
         }
+
+
 
         private void SkorPictureBox_Click(object sender, EventArgs e)
         {
@@ -176,7 +186,7 @@ namespace B211200300_FormGameProject
             MessageBox.Show("Oyunu Başlatmak İçin -Enter- Tuşuna Basınız.\n" +
                             "Oyundan Çıkmak İçin -ESC- Tuşuna Basınız.\n" +
                             "Hareket Etmek İçin -A , D- veya -Sol Ok , Sağ Ok- Tuşlarını Kullanınız.\n" +
-                            "Oyunu Durdurmak İçin -P- Tuşuna Basınız.\n");
+                            "Oyunu Durdurmak İçin -P- Tuşuna Basınız.");
         }
     }
 }
