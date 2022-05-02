@@ -19,16 +19,16 @@ namespace Game.Library.Concrete
     public class Oyun : IOyun
     {
         #region Alanlar
-
         private readonly Timer _kalanSureTimer = new Timer() { Interval = 1000 };
         private readonly Timer _hareketTimer = new Timer() { Interval = 80 };
-        private readonly Timer _toplananCisimTimer = new Timer() { Interval = 400 };
+        private readonly Timer _toplananCisimTimer = new Timer() { Interval = 300 };
 
         private int _kalanSure;
         private int _oyunSkoru;
         private int _kanatSayisi;
         private int _motorSayisi;
         private int _kodSayisi;
+        private int labelSayaci;
 
         private readonly Panel _oyunPanel;
         private readonly Panel _bilgiPanel;
@@ -36,7 +36,9 @@ namespace Game.Library.Concrete
         private Sepet _sepet;
         private readonly TextBox _oyuncuAdiTextBox;
         private readonly TextBox _oyunSuresiTextBox;
-        private readonly Label _gizliKutuLabel;
+        private Label _gizliKutuLabel;
+
+        private static readonly Random Random = new Random();
 
         private readonly List<ToplananCisim> _toplananCisimler = new List<ToplananCisim>();
         #endregion
@@ -109,7 +111,7 @@ namespace Game.Library.Concrete
         }
 
 
-        public Oyun(Panel oyunPanel, Panel bilgiPanel, Panel anaMenuPanel, TextBox oyuncuAdiTextBox, TextBox oyunSuresiTextBox, Label gizliKutuLabel)
+        public Oyun(Panel oyunPanel, Panel bilgiPanel, Panel anaMenuPanel, TextBox oyuncuAdiTextBox, TextBox oyunSuresiTextBox)
         {
             _kalanSureTimer.Tick += KalanSureTimer_Tick;
             _toplananCisimTimer.Tick += ToplananCisimTimer_Tick;
@@ -120,24 +122,45 @@ namespace Game.Library.Concrete
             _anaMenuPanel = anaMenuPanel;
             _oyuncuAdiTextBox = oyuncuAdiTextBox;
             _oyunSuresiTextBox = oyunSuresiTextBox;
-            _gizliKutuLabel = gizliKutuLabel;
 
-
+            gizliKutuLabelOlustur();
         }
 
-        int labelSayaci = 0;
+        private void gizliKutuLabelOlustur()
+        {
+            _gizliKutuLabel = new Label();
+            _oyunPanel.Controls.Add(_gizliKutuLabel);
+            _gizliKutuLabel.Location = new Point((_oyunPanel.Width - _bilgiPanel.Width) / 2, 40);
+            _gizliKutuLabel.ForeColor = Color.Red;
+            _gizliKutuLabel.BackColor = Color.Aqua;
+            _gizliKutuLabel.TextAlign = ContentAlignment.TopLeft;
+            _gizliKutuLabel.Font = new Font(FontFamily.GenericSansSerif, 15);
+            _gizliKutuLabel.AutoSize = true;
+        }
+
+
         private void KalanSureTimer_Tick(object sender, EventArgs e)
         {
             KalanSure--;
-            labelSayaci++;
 
-            if (labelSayaci > 3)
+            if (_gizliKutuLabel.Visible)
+            {
+                labelSayaci++;
+            }
+            if (labelSayaci > 2)
             {
                 _gizliKutuLabel.Visible = false;
                 labelSayaci = 0;
             }
 
+            if (KalanSure < 5)
+            {
+                _oyunPanel.Controls.Add(_gizliKutuLabel);
+                _gizliKutuLabel.Visible = true;
+                _gizliKutuLabel.Text = $"Sürenin Bitmesine {KalanSure} Saniye Kaldı !";
+            }
         }
+
         private void ToplananCisimTimer_Tick(object sender, EventArgs e)
         {
             ToplananCisimOlustur();
@@ -155,23 +178,22 @@ namespace Game.Library.Concrete
 
             DevamEdiyorMu = true;
 
-            //OyunPaneliTemizle();
             OyunBaslangıcınıAyarla();
             PanelleriAyarla();
             ZamanlayicilariBaslat();
             SepetOlustur();
         }
 
-        // Bitirildiğinde paneller gidiyor
+
         public void Bitir()
         {
             if (!DevamEdiyorMu) return;
 
             DevamEdiyorMu = false;
 
-            OyunPaneliTemizle();
             ZamanlayicilariDurdur();
             SkoruYaz();
+            OyunPaneliTemizle();
             PanelleriAyarla();
         }
 
@@ -281,11 +303,9 @@ namespace Game.Library.Concrete
                             }
                             else if (toplananCisim.GetType().Name == "GizliKutu")
                             {
-                                Random rnd = new Random();
-                                var sayi = rnd.Next(100);
+                                var sayi = Random.Next(100);
 
                                 _gizliKutuLabel.Visible = true;
-                                _oyunPanel.Controls.Add(_gizliKutuLabel);
 
                                 if (sayi >= 0 && sayi < 50)
                                 {
@@ -390,27 +410,21 @@ namespace Game.Library.Concrete
 
         private void ToplananCisimOlustur()
         {
-            Random r = new Random();
-
-            var random = new Random(r.Next());
-            var sayi = random.Next(4);
-
+            var sayi = Random.Next(4);
             switch (sayi)
             {
                 case 1:
                     var motor = new Motor(PanelUzunlugu, PanelGenisligi);
-                    _toplananCisimler.Add(motor);
-                    _oyunPanel.Controls.Add(motor);
+                    CisimOlustur(motor);
+
                     break;
                 case 2:
                     var kanat = new Kanat(PanelUzunlugu, PanelGenisligi);
-                    _toplananCisimler.Add(kanat);
-                    _oyunPanel.Controls.Add(kanat);
+                    CisimOlustur(kanat);
                     break;
                 case 3:
                     var kod = new Kod(PanelUzunlugu, PanelGenisligi);
-                    _toplananCisimler.Add(kod);
-                    _oyunPanel.Controls.Add(kod);
+                    CisimOlustur(kod);
                     break;
             }
 
@@ -424,6 +438,22 @@ namespace Game.Library.Concrete
 
             }
         }
+
+        private void CisimOlustur(ToplananCisim toplananCisim)
+        {
+            bool ustUsteGeldiMi;
+
+            ustUsteGeldiMi = ToplananCisimUstUsteGeliyorMu(toplananCisim);
+            if (ustUsteGeldiMi)
+            {
+                ToplananCisimOlustur();
+                return;
+            }
+
+            _toplananCisimler.Add(toplananCisim);
+            _oyunPanel.Controls.Add(toplananCisim);
+        }
+
         private void SkoruYaz()
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -432,5 +462,20 @@ namespace Game.Library.Concrete
                 streamWriter.Write($"0◘{_oyuncuAdiTextBox.Text}◘{DateTime.Now}◘{OyunSkoru}\n");
             }
         }
+
+        private bool ToplananCisimUstUsteGeliyorMu(ToplananCisim toplananCisim)
+        {
+            foreach (var _toplananCisim in _toplananCisimler)
+            {
+                if ((_toplananCisim.Top <= toplananCisim.Bottom && _toplananCisim.Left <= toplananCisim.Right) 
+                    || _toplananCisim.Top <= toplananCisim.Bottom && _toplananCisim.Right >= toplananCisim.Left )
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
     }
 }

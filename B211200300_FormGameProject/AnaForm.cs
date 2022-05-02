@@ -27,12 +27,12 @@ namespace B211200300_FormGameProject
             FormBorderStyle = FormBorderStyle.None;
             oyunBaslatPictureBox.Location = new Point(this.Width - 70, this.Height - 100);
 
-            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuAdiTextBox, oyunSuresiTextBox,gizliKutuLabel);
+            _oyun = new Oyun(oyunPanel, bilgiPanel, anaMenuPanel, oyuncuAdiTextBox, oyunSuresiTextBox);
             _oyun.KalanSureDegisti += Oyun_KalanSureDegisti;
             _oyun.CisimToplandi += Oyun_CisimToplandi;
             _oyun.SkorDegisti += Oyun_SkorDegisti;
 
-            oyunSuresiTextBox.Text = 5.ToString();
+            oyunSuresiTextBox.Text = 6.ToString();
 
         }
 
@@ -43,7 +43,6 @@ namespace B211200300_FormGameProject
             if (!_oyun.DevamEdiyorMu)
             {
                 bilgiPanel.Visible = false;
-                gizliKutuLabel.Visible = false;
             }
 
             oyuncuAdiTextBox.Visible = false;

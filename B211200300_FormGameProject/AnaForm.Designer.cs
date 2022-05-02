@@ -43,7 +43,6 @@
             this.kalansureLabel = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
             this.anaMenuPanel = new System.Windows.Forms.Panel();
-            this.gizliKutuLabel = new System.Windows.Forms.Label();
             this.oyunBaslatPictureBox = new System.Windows.Forms.PictureBox();
             this.skorPictureBox = new System.Windows.Forms.PictureBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -216,7 +215,6 @@
             // anaMenuPanel
             // 
             this.anaMenuPanel.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.anaMenuPanel.Controls.Add(this.gizliKutuLabel);
             this.anaMenuPanel.Controls.Add(this.oyunBaslatPictureBox);
             this.anaMenuPanel.Controls.Add(this.skorPictureBox);
             this.anaMenuPanel.Controls.Add(this.textBox4);
@@ -228,18 +226,6 @@
             this.anaMenuPanel.Name = "anaMenuPanel";
             this.anaMenuPanel.Size = new System.Drawing.Size(1599, 881);
             this.anaMenuPanel.TabIndex = 0;
-            // 
-            // gizliKutuLabel
-            // 
-            this.gizliKutuLabel.AutoSize = true;
-            this.gizliKutuLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gizliKutuLabel.ForeColor = System.Drawing.Color.Red;
-            this.gizliKutuLabel.Location = new System.Drawing.Point(728, 49);
-            this.gizliKutuLabel.Name = "gizliKutuLabel";
-            this.gizliKutuLabel.Size = new System.Drawing.Size(72, 39);
-            this.gizliKutuLabel.TabIndex = 3;
-            this.gizliKutuLabel.Text = "info";
-            this.gizliKutuLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // oyunBaslatPictureBox
             // 
@@ -348,7 +334,6 @@
         private System.Windows.Forms.PictureBox skorPictureBox;
         private System.Windows.Forms.PictureBox oyunBaslatPictureBox;
         private System.Windows.Forms.TextBox oyunSuresiTextBox;
-        private System.Windows.Forms.Label gizliKutuLabel;
     }
 }
 
