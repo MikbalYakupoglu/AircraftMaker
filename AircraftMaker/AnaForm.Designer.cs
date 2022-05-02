@@ -1,4 +1,4 @@
-﻿namespace B211200300_FormGameProject
+﻿namespace AircraftMaker
 {
     partial class AnaForm
     {
@@ -46,7 +46,7 @@
             this.anaMenuPanel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bilgiPictureBox = new System.Windows.Forms.PictureBox();
             this.oyuncuBilgiPanel = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.motorPictureBox)).BeginInit();
             this.oyunPanel.SuspendLayout();
             this.anaMenuPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bilgiPictureBox)).BeginInit();
             this.oyuncuBilgiPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oyunBaslatPictureBox)).BeginInit();
@@ -230,7 +230,7 @@
             this.anaMenuPanel.BackColor = System.Drawing.SystemColors.HotTrack;
             this.anaMenuPanel.Controls.Add(this.label8);
             this.anaMenuPanel.Controls.Add(this.label7);
-            this.anaMenuPanel.Controls.Add(this.pictureBox2);
+            this.anaMenuPanel.Controls.Add(this.bilgiPictureBox);
             this.anaMenuPanel.Controls.Add(this.oyuncuBilgiPanel);
             this.anaMenuPanel.Controls.Add(this.pictureBox1);
             this.anaMenuPanel.Controls.Add(this.oyunBaslatPictureBox);
@@ -261,16 +261,16 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "En Yüksek Skorlar İçin Tıklayınız\r\n";
             // 
-            // pictureBox2
+            // bilgiPictureBox
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(108, 361);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.bilgiPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("bilgiPictureBox.Image")));
+            this.bilgiPictureBox.Location = new System.Drawing.Point(108, 361);
+            this.bilgiPictureBox.Name = "bilgiPictureBox";
+            this.bilgiPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.bilgiPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.bilgiPictureBox.TabIndex = 5;
+            this.bilgiPictureBox.TabStop = false;
+            this.bilgiPictureBox.Click += new System.EventHandler(this.bilgiPictureBox_Click);
             // 
             // oyuncuBilgiPanel
             // 
@@ -425,7 +425,7 @@
             this.oyunPanel.ResumeLayout(false);
             this.anaMenuPanel.ResumeLayout(false);
             this.anaMenuPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bilgiPictureBox)).EndInit();
             this.oyuncuBilgiPanel.ResumeLayout(false);
             this.oyuncuBilgiPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -464,7 +464,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox bilgiPictureBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
     }

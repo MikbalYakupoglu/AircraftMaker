@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace B211200300_FormGameProject
+namespace AircraftMaker
 {
     internal static class Program
     {

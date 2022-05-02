@@ -12,7 +12,7 @@ using System.Windows.Forms;
 using Game.Library.Concrete;
 using Game.Library.Enum;
 
-namespace B211200300_FormGameProject
+namespace AircraftMaker
 {
     public partial class AnaForm : Form
     {
@@ -101,6 +101,7 @@ namespace B211200300_FormGameProject
             }
         }
 
+        #region Olaylar
         private void Oyun_KalanSureDegisti(object sender, EventArgs e)
         {
             if (_oyun.KalanSure >= 0) kalansure.Text = _oyun.KalanSure.ToString();
@@ -122,7 +123,18 @@ namespace B211200300_FormGameProject
             kalanihaLabel.Text = _oyun.KalanUrun.ToString();
         }
 
+        #endregion
 
+
+        #region Resimler
+
+        private void bilgiPictureBox_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Oyunu Başlatmak İçin -Enter- Tuşuna Basınız.\n" +
+                            "Oyundan Çıkmak İçin -ESC- Tuşuna Basınız.\n" +
+                            "Hareket Etmek İçin -A , D- veya -Sol Ok , Sağ Ok- Tuşlarını Kullanınız.\n" +
+                            "Oyunu Durdurmak İçin -P- Tuşuna Basınız.");
+        }
 
         private void SkorPictureBox_Click(object sender, EventArgs e)
         {
@@ -135,6 +147,11 @@ namespace B211200300_FormGameProject
             _oyun.Basla();
             Focus();
         }
+
+        #endregion
+
+
+        #region TextBoxlar
 
         private void oyuncuAdiTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -181,12 +198,11 @@ namespace B211200300_FormGameProject
             ActiveControl = oyuncuAdiTextBox;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Oyunu Başlatmak İçin -Enter- Tuşuna Basınız.\n" +
-                            "Oyundan Çıkmak İçin -ESC- Tuşuna Basınız.\n" +
-                            "Hareket Etmek İçin -A , D- veya -Sol Ok , Sağ Ok- Tuşlarını Kullanınız.\n" +
-                            "Oyunu Durdurmak İçin -P- Tuşuna Basınız.");
-        }
+        #endregion
+
+
+
+
+
     }
 }
