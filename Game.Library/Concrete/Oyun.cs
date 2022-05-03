@@ -133,21 +133,34 @@ namespace Game.Library.Concrete
 
         private void ToplananCisimOlustur()
         {
-            var sayi = Random.Next(4);
+            var sayi = Random.Next(6);
+
+
+            if (sayi >= 0 && sayi < 1)
+            {
+                var motor = new Motor(PanelUzunlugu, PanelGenisligi);
+                CisimOlustur(motor);
+            }
+            else if (sayi >= 1 && sayi < 3)
+            {
+                var kanat = new Kanat(PanelUzunlugu, PanelGenisligi);
+                CisimOlustur(kanat);
+            }
+            else if (sayi >= 3 && sayi < 6)
+            {
+                var kod = new Kod(PanelUzunlugu, PanelGenisligi);
+                CisimOlustur(kod);
+            }
+
+
             switch (sayi)
             {
                 case 1:
-                    var motor = new Motor(PanelUzunlugu, PanelGenisligi);
-                    CisimOlustur(motor);
-
                     break;
                 case 2:
-                    var kanat = new Kanat(PanelUzunlugu, PanelGenisligi);
-                    CisimOlustur(kanat);
                     break;
                 case 3:
-                    var kod = new Kod(PanelUzunlugu, PanelGenisligi);
-                    CisimOlustur(kod);
+
                     break;
             }
 
