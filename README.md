@@ -1,7 +1,7 @@
 # AircraftMaker
 
 - This is Basic Collect Game Made by Windows Form (.Net Framework 4.8)
-- Basic Made with https://www.youtube.com/watch?v=QE7cc1X3Aks&t=4s
+- Basics Made with https://www.youtube.com/watch?v=QE7cc1X3Aks&t=4s
 
 
 - Menu 
