@@ -460,6 +460,7 @@ namespace Game.Library.Concrete
             {
                 _bilgiPanel.Visible = true;
                 _anaMenuPanel.Visible = false;
+                gizliKutuLabelOlustur();
             }
         }
 
@@ -604,8 +605,6 @@ namespace Game.Library.Concrete
             _oyuncuAdiTextBox = oyuncuAdiTextBox;
             _oyunSuresiTextBox = oyunSuresiTextBox;
             _uretilecekMiktarTextBox = uretilecekMilktarTextBox;
-
-            gizliKutuLabelOlustur();
         }
     }
 }
