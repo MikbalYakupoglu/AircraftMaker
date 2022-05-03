@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Top5Form));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +44,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Top5Form.Properties.Resources.trophy;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(799, 27);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 100);
@@ -53,7 +54,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Top5Form.Properties.Resources.medal;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(41, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
@@ -94,6 +95,7 @@
             this.Sıra.HeaderText = "Sıra";
             this.Sıra.MinimumWidth = 6;
             this.Sıra.Name = "Sıra";
+            this.Sıra.ReadOnly = true;
             this.Sıra.Width = 125;
             // 
             // OyuncuIsmi
@@ -103,6 +105,7 @@
             this.OyuncuIsmi.HeaderText = "Oyuncu İsmi";
             this.OyuncuIsmi.MinimumWidth = 6;
             this.OyuncuIsmi.Name = "OyuncuIsmi";
+            this.OyuncuIsmi.ReadOnly = true;
             // 
             // Tarih
             // 
@@ -111,6 +114,7 @@
             this.Tarih.HeaderText = "Tarih";
             this.Tarih.MinimumWidth = 6;
             this.Tarih.Name = "Tarih";
+            this.Tarih.ReadOnly = true;
             // 
             // Skor
             // 
@@ -118,6 +122,7 @@
             this.Skor.HeaderText = "Skor";
             this.Skor.MinimumWidth = 6;
             this.Skor.Name = "Skor";
+            this.Skor.ReadOnly = true;
             this.Skor.Width = 150;
             // 
             // Top5Form
