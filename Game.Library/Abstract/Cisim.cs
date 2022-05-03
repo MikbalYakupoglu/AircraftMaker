@@ -43,7 +43,7 @@ namespace Game.Library.Abstract
         
         public Cisim(int panelUzunlugu, int panelGenisligi)
         {
-            Image = Image.FromFile($@"Images\{GetType().Name}.png");
+            Image = Image.FromFile($@"..\..\Images\{GetType().Name}.png");
             PanelUzunlugu = panelUzunlugu;
             PanelGenisligi = panelGenisligi;
             SizeMode = PictureBoxSizeMode.AutoSize;
