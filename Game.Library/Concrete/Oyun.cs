@@ -22,7 +22,7 @@ namespace Game.Library.Concrete
 
         private readonly Timer _kalanSureTimer = new Timer() { Interval = 1000 };
         private readonly Timer _hareketTimer = new Timer() { Interval = 80 };
-        private readonly Timer _toplananCisimTimer = new Timer() { Interval = 300 };
+        private readonly Timer _toplananCisimTimer = new Timer() { Interval = 200 };
 
         private int _kalanSure;
 
@@ -133,35 +133,23 @@ namespace Game.Library.Concrete
 
         private void ToplananCisimOlustur()
         {
-            var sayi = Random.Next(6);
+            int sayi = Random.Next(7);
 
 
-            if (sayi >= 0 && sayi < 1)
+            if (sayi == 1)
             {
                 var motor = new Motor(PanelUzunlugu, PanelGenisligi);
                 CisimOlustur(motor);
             }
-            else if (sayi >= 1 && sayi < 3)
+            else if (sayi >= 2 && sayi <= 3)
             {
                 var kanat = new Kanat(PanelUzunlugu, PanelGenisligi);
                 CisimOlustur(kanat);
             }
-            else if (sayi >= 3 && sayi < 6)
+            else if (sayi >= 4 && sayi <= 6)
             {
                 var kod = new Kod(PanelUzunlugu, PanelGenisligi);
                 CisimOlustur(kod);
-            }
-
-
-            switch (sayi)
-            {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-
-                    break;
             }
 
             if (KalanSure % 10 == 0)
@@ -582,24 +570,27 @@ namespace Game.Library.Concrete
 
         public void OyunHiziniHesapla()
         {
-            if (TamamlananUrun > 5 && TamamlananUrun < 10)
+            int baslangicSayisi = int.Parse(_oyunSuresiTextBox.Text);
+
+            if (KalanSure <= baslangicSayisi * 0.2)
+            {
+                _hareketTimer.Interval = 30;
+            }
+            else if (KalanSure <= baslangicSayisi * 0.3)
+            {
+                _hareketTimer.Interval = 40;
+            }
+            else if (KalanSure <= baslangicSayisi * 0.4)
+            {
+                _hareketTimer.Interval = 50;
+            }
+            else if (KalanSure <= baslangicSayisi * 0.6)
             {
                 _hareketTimer.Interval = 60;
             }
-            else if (TamamlananUrun >= 10 && TamamlananUrun < 15)
+            else if (KalanSure <= baslangicSayisi * 0.8)
             {
-                _hareketTimer.Interval = 45;
-
-            }
-            else if (TamamlananUrun >= 15 && TamamlananUrun < 20)
-            {
-                _hareketTimer.Interval = 30;
-
-            }
-            else if (TamamlananUrun >= 20)
-            {
-                _hareketTimer.Interval = 20;
-
+                _hareketTimer.Interval = 70;
             }
         }
 
