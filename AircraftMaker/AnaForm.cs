@@ -163,7 +163,7 @@ namespace AircraftMaker
             SiradakiTexteGec(sender, e);
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        private void uretilecekMiktarTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter || e.KeyChar == (char)Keys.Tab)
             {

@@ -40,7 +40,7 @@ namespace Game.Library.Abstract
         }
 
 
-        
+
         public Cisim(int panelUzunlugu, int panelGenisligi)
         {
             Image = Image.FromFile($@"..\..\Images\{GetType().Name}.png");
@@ -87,7 +87,7 @@ namespace Game.Library.Abstract
             if (Right == PanelGenisligi) return true;
 
             var yeniRight = Right + hareketMesafesi;
-            var tasacakMi = yeniRight >  PanelGenisligi;
+            var tasacakMi = yeniRight > PanelGenisligi;
 
             Right = tasacakMi ? PanelGenisligi : yeniRight;
 
@@ -97,7 +97,7 @@ namespace Game.Library.Abstract
         private bool AsagiHareketEttir()
         {
             if (Bottom == PanelUzunlugu) return true;
-                
+
             var yeniBottom = Bottom + hareketMesafesi;
             var tasacakMi = yeniBottom > PanelUzunlugu;
 

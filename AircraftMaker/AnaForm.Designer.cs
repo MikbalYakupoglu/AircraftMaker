@@ -359,7 +359,7 @@
             this.uretilecekMiktarTextBox.Size = new System.Drawing.Size(167, 36);
             this.uretilecekMiktarTextBox.TabIndex = 0;
             this.uretilecekMiktarTextBox.Text = "5";
-            this.uretilecekMiktarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.uretilecekMiktarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uretilecekMiktarTextBox_KeyPress);
             // 
             // textBox4
             // 
