@@ -35,7 +35,7 @@ namespace AircraftMaker
             _oyun.CisimToplandi += Oyun_CisimToplandi;
             _oyun.UrunTamamlandi += Oyun_UrunTamamlandi;
 
-            textBox4.ReadOnly = true;
+            uretilecekUrunTextBox.ReadOnly = true;
         }
 
 
@@ -177,7 +177,7 @@ namespace AircraftMaker
             }
         }
 
-        private void textBox4_Enter(object sender, EventArgs e)
+        private void uretilecekUrunTextBox_Enter(object sender, EventArgs e)
         {
             ActiveControl = oyuncuAdiTextBox;
         }

@@ -55,7 +55,7 @@
             this.oyuncuAdiTextBox = new System.Windows.Forms.TextBox();
             this.oyunSuresiTextBox = new System.Windows.Forms.TextBox();
             this.uretilecekMiktarTextBox = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.uretilecekUrunTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.oyunBaslatPictureBox = new System.Windows.Forms.PictureBox();
             this.skorPictureBox = new System.Windows.Forms.PictureBox();
@@ -282,7 +282,7 @@
             this.oyuncuBilgiPanel.Controls.Add(this.oyuncuAdiTextBox);
             this.oyuncuBilgiPanel.Controls.Add(this.oyunSuresiTextBox);
             this.oyuncuBilgiPanel.Controls.Add(this.uretilecekMiktarTextBox);
-            this.oyuncuBilgiPanel.Controls.Add(this.textBox4);
+            this.oyuncuBilgiPanel.Controls.Add(this.uretilecekUrunTextBox);
             this.oyuncuBilgiPanel.Location = new System.Drawing.Point(1016, 474);
             this.oyuncuBilgiPanel.Name = "oyuncuBilgiPanel";
             this.oyuncuBilgiPanel.Size = new System.Drawing.Size(440, 231);
@@ -361,17 +361,17 @@
             this.uretilecekMiktarTextBox.Text = "5";
             this.uretilecekMiktarTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.uretilecekMiktarTextBox_KeyPress);
             // 
-            // textBox4
+            // uretilecekUrunTextBox
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.Info;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.Location = new System.Drawing.Point(242, 173);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(167, 36);
-            this.textBox4.TabIndex = 0;
-            this.textBox4.Text = "Bayraktar İHA";
-            this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
+            this.uretilecekUrunTextBox.BackColor = System.Drawing.SystemColors.Info;
+            this.uretilecekUrunTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.uretilecekUrunTextBox.Location = new System.Drawing.Point(242, 173);
+            this.uretilecekUrunTextBox.Name = "uretilecekUrunTextBox";
+            this.uretilecekUrunTextBox.ReadOnly = true;
+            this.uretilecekUrunTextBox.Size = new System.Drawing.Size(167, 36);
+            this.uretilecekUrunTextBox.TabIndex = 0;
+            this.uretilecekUrunTextBox.Text = "Bayraktar İHA";
+            this.uretilecekUrunTextBox.Enter += new System.EventHandler(this.uretilecekUrunTextBox_Enter);
             // 
             // pictureBox1
             // 
@@ -452,7 +452,7 @@
         private System.Windows.Forms.Label tamamlananihaLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox uretilecekUrunTextBox;
         private System.Windows.Forms.TextBox uretilecekMiktarTextBox;
         private System.Windows.Forms.TextBox oyuncuAdiTextBox;
         private System.Windows.Forms.PictureBox skorPictureBox;
