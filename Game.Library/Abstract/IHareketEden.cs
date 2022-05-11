@@ -1,10 +1,4 @@
-﻿/*
- * B211200300
- * Muhammet İkbal Yakupoğlu
- * Bilişim Sistemleri Mühendisliği
- */
-
-using Game.Library.Enum;
+﻿using Game.Library.Enum;
 
 namespace Game.Library.Abstract
 {

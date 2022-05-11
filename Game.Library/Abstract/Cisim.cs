@@ -1,10 +1,4 @@
-﻿/*
- * B211200300
- * Muhammet İkbal Yakupoğlu
- * Bilişim Sistemleri Mühendisliği
- */
-
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Game.Library.Enum;

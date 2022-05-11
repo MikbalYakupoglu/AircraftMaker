@@ -1,11 +1,4 @@
-﻿/*
- * B211200300
- * Muhammet İkbal Yakupoğlu
- * Bilişim Sistemleri Mühendisliği
- */
-
-
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
